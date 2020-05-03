@@ -1,6 +1,6 @@
-FROM python:3.7-alpine
+FROM python
 
-RUN apk --update add --no-cache bash tzdata build-base libffi-dev openssl-dev
+RUN apt update && apt install bash tzdata libffi-dev openssl
 
 WORKDIR .
 
